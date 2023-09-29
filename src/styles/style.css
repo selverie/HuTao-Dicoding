@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE4C4;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: none;
+}
+
+header {
+    background-color: #FFE4C4;
+    padding: 15px;
+    border-bottom: 2px solid #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+
+.active-link {
+    border-bottom: 2px solid #000000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 65px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #FFE4C4;
+    margin: 3px 0;
+    border: 2px solid #000000;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin-right: 20px;
+    margin-bottom: 10px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main article img {
+    max-width: 100%;
+    height: auto;
+}
+
+article {
+    flex: 2;
+    margin-right: 20px;
+    border: 2px solid #000000;
+    background-color: #FFE4C4;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 0; 
+}
+
+aside {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+aside img {
+    width: 150px;
+    height: auto;
+}
+
+aside div p {
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #FFE4C4;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #000000;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #FFE4C4;
+        padding: 15px;
+        border: 2px solid #000000;
+        height: auto; 
+    }
+    .menu.active {
+        display: flex;
+    }
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 35px; 
+    height: 35px;
+    background-image: url('../images/crusor.png'); 
+    background-size: cover;
+    pointer-events: none; 
+    z-index: 9999; 
+    transform: translate(-50%, -50%); 
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none; 
+}
+
+.back-to-top img {
+    width: 30px;
+    height: 20px;
+}
